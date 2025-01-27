@@ -1,27 +1,17 @@
 import { DataTypes } from 'sequelize';
 import { sequelize } from '../database/index.js';
 
-export const User = sequelize.define(
-  'User',
+export const Role = sequelize.define(
+  'Role',
   {
     // Model attributes are defined here
-    first_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    last_name: {
+    code: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    middle_name: {
-      type: DataTypes.STRING,
-    },
-    role_id: {
-      type: DataTypes.INTEGER,
-    },
-    status: {
-      type: DataTypes.ENUM(),
-      values: ['ACTIVE', 'INACTIVE'],
     },
     created_at: {
       type: DataTypes.DATE,
@@ -42,8 +32,8 @@ export const User = sequelize.define(
   {
     // Other model options go here
     sequelize, // We need to pass the connection instance
-    modelName: 'User', // We need to choose the model name
-    tableName: 'user',
+    modelName: 'Role', // We need to choose the model name
+    tableName: 'role',
     timestamps: false
   },
 );

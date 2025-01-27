@@ -4,10 +4,14 @@ import bodyParser from 'body-parser';
 import UserRoutes from './routes/UserRoutes.js';
 import AuthRoutes from './routes/AuthRoutes.js';
 import { sequelize } from './database/index.js';
+// import { Role } from './models/RoleModel.js';
+// import { Permission } from './models/PermissionModel.js';
+// import { RolePermission } from './models/RolePermissionModel.js';
+
 const app = express();
 const PORT = 3000;
 
-// sequelize.sync({ force: true })  // This drops and recreates the table
+// sequelize.sync({ force: true })
 // .then(() => {
 //     console.log('ALL MODELS ARE SYNCED');
 // })
